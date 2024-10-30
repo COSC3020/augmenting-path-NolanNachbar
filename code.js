@@ -1,6 +1,8 @@
-function augmentingPath(graph, start, end) { // note that graph will be an adjacency list
+function augmentingPath(graph, start, end) {
     let visited = [] 
     let path = []
+
+    if (start === end) return [start];
     
     function depthFirstHelp(node){
         if (visited.includes(node)) return false;
