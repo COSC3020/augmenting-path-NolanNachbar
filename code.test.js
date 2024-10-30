@@ -6,7 +6,7 @@ eval(fs.readFileSync('code.js')+'');
 var graph = {'foo': {'boo': 7},
     'boo': {'foo': 3, 'bar': 2},
     'bar': {'boo': 4}};
-if (JSON.stringify(augmentingPath(graph, 'foo', 'bar')) != JSON.stringify(['foo', 'boo', 'bar'])) print(augmentingPath(graph, 'foo', 'bar'))
+if (JSON.stringify(augmentingPath(graph, 'foo', 'bar')) != JSON.stringify(['foo', 'boo', 'bar'])) print(augmentingPath(graph, 'foo', 'bar'));
 assert(JSON.stringify(augmentingPath(graph, 'foo', 'bar')) == JSON.stringify(['foo', 'boo', 'bar']));
 
 var graph = {'foo': {'boo': 7, 'd': 4},
